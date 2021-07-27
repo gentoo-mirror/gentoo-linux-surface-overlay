@@ -1,0 +1,14 @@
+<?xml version="1.0" ?>
+<repositories version="1.0">
+  <repo quality="experimental" status="unofficial">
+    <name>gentoo-linux-surface</name>
+      <description lang="en">Gentoo ebuilds to assist installation and running of Gentoo Linux on Microsoft Surface device.</description>
+        <homepage>https://github.com/CanuteTheGreat/gentoo-linux-surface-overlay</homepage>
+        <owner type="person">
+            <name>Ronald Farrer</name>
+            <email>canutethegreat@gmail.com</email>
+        </owner>
+        <source type="git">git://github.com/CanuteTheGreat/gentoo-linux-surface-overlay.git</source>
+        <feed>https://github.com/CanuteTheGreat/gentoo-linux-surface-overlay/commits/master.atom</feed>
+  </repo>
+</repositories>
