@@ -19,7 +19,7 @@ DESCRIPTION="Full sources including the Gentoo and Surface patchset for the ${KV
 SRC_URI="${KERNEL_URI} ${GENPATCHES_URI} ${ARCH_URI}
 		https://raw.githubusercontent.com/linux-surface/linux-surface/master/patches/5.10/0001-surface3-oemb.patch
 		https://raw.githubusercontent.com/linux-surface/linux-surface/master/patches/5.10/0002-wifi.patch
-		https://raw.githubusercontent.com/linux-surface/linux-surface/master/patches/5.10/0003-itps.patch
+		https://raw.githubusercontent.com/linux-surface/linux-surface/master/patches/5.10/0003-ipts.patch
 		https://raw.githubusercontent.com/linux-surface/linux-surface/master/patches/5.10/0004-surface-gpe.patch
 		https://raw.githubusercontent.com/linux-surface/linux-surface/master/patches/5.10/0005-surface-sam-over-hid.patch
 		https://raw.githubusercontent.com/linux-surface/linux-surface/master/patches/5.10/0006-surface-sam.patch
