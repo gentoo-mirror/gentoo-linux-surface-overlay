@@ -19,6 +19,10 @@ BDEPEND=""
 EGIT_REPO_URI="https://github.com/linux-surface/surface-dtx-daemon"
 S="${WORKDIR}/surface-dtx-daemon-9999"
 
+src_prepare() {
+	epatch "${FILESDIR}/cargo.patch"
+}
+
 src_unpack() {
 	git-r3_src_unpack
 	cargo_live_src_unpack

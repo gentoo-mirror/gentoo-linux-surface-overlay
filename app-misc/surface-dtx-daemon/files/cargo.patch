@@ -1,0 +1,48 @@
+--- Cargo.toml	2021-07-30 19:57:48.471382115 -0700
++++ Cargo.toml.new	2021-07-30 20:13:26.297811214 -0700
+@@ -1,10 +1,43 @@
+-[workspace]
++[package]
++name = "surface-dtx-daemon"
++version = "0.3.0"
++authors = ["Maximilian Luz <luzmaximilian@gmail.com>"]
++description = "Linux User-Space Detachment System (DTX) Daemon for the Surface ACPI Driver (and Surface Books). Currently only the Surface Book 2 is supported, due to lack of driver-support on the Surface Book 1. This may change in the future."
+ 
+ members = [
+     "surface-dtx-daemon",
+     "surface-dtx-userd",
+ ]
+ 
++repository = "https://github.com/linux-surface/surface-dtx-daemon"
++readme = "README.md"
++license = "MIT"
++
++edition = "2018"
++build = "build.rs"
++
++[dependencies]
++anyhow = "1.0.40"
++clap = "2.33.3"
++indoc = "1.0.3"
++nix = "0.20.0"
++sdtx = { git = "https://github.com/linux-surface/libsurfacedtx", tag = "v0.1.0" }
++serde = "1.0.125"
++serde_json = "1.0.64"
++thiserror = "1.0.24"
++udev = "0.6.2"
++
++[build-dependencies]
++anyhow = "1.0.40"
++clap = "2.33.3"
++indoc = "1.0.3"
++nix = "0.20.0"
++sdtx = { git = "https://github.com/linux-surface/libsurfacedtx", tag = "v0.1.0" }
++serde = "1.0.125"
++serde_json = "1.0.64"
++thiserror = "1.0.24"
++udev = "0.6.2"
++
+ [profile.release]
+ lto = true
+ codegen-units = 1
+
