@@ -3,7 +3,7 @@
 
 EAPI=7
 
-inherit cargo git-r3
+inherit cargo git-r3 eutils
 
 DESCRIPTION="Utility to control attach/detach of clipboard on Surface Book devices."
 HOMEPAGE="https://github.com/linux-surface/linux-surface"
