@@ -26,7 +26,7 @@ src_unpack() {
 
 src_compile() {
 	cd surface-dtx-daemon
-	cargo_src_compile --locked surface-dtx-daemon
+	cargo_src_compile --locked
 	cd ../surface-dtx-userd
-	cargo_src_compile --locked surface-dtx-userd
+	cargo_src_compile --locked
 }
