@@ -31,3 +31,4 @@ src_compile() {
 	cd ../surface-dtx-userd
 	cargo_src_compile --locked
 }
+
