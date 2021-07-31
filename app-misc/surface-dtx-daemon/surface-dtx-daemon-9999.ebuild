@@ -21,9 +21,11 @@ S="${WORKDIR}/surface-dtx-daemon-9999"
 
 src_unpack() {
 	git-r3_src_unpack
-	cargo_live_src_unpack
 }
 
 src_compile() {
-	cargo_src_compile --locked
+	emake CC="$(tc-getCC)" \
+		CPPFLAGS="${CPPFLAGS}" \
+		CFLAGS="${CFLAGS}" \
+		LDFLAGS="${LDFLAGS}"
 }
