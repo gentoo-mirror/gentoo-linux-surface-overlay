@@ -21,6 +21,7 @@ S="${WORKDIR}/surface-dtx-daemon-9999"
 
 src_prepare() {
 	eapply "${FILESDIR}/cargo.patch"
+	default
 }
 
 src_unpack() {
