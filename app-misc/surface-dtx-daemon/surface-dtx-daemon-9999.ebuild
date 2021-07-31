@@ -25,7 +25,6 @@ src_unpack() {
 }
 
 src_compile() {
-	rm -f Cargo.toml
 	cd surface-dtx-daemon
 	cargo_src_compile --locked
 	cd ../surface-dtx-userd
