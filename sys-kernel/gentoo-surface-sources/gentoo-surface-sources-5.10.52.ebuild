@@ -33,6 +33,7 @@ SRC_URI="${KERNEL_URI} ${GENPATCHES_URI} ${ARCH_URI}
 S="${WORKDIR}/linux-${KV_FULL}"
 
 PATCHES=(  
+	"${FILESDIR}/Makefile.patch"
 	"${DISTDIR}/0001-surface3-oemb.patch"
 	"${DISTDIR}/0002-wifi.patch"
 	"${DISTDIR}/0003-ipts.patch"
@@ -57,6 +58,7 @@ pkg_setup() {
 }
 
 pkg_postinst() {
+	mv "${WORKDIR}/linux-${KV_FULL}" "${WORKDIR}/linux-${KV_FULL}-surface"
 	kernel-2_pkg_postinst
 	einfo "For more info on this patchset, and how to report problems, see:"
 	einfo "${HOMEPAGE}"
