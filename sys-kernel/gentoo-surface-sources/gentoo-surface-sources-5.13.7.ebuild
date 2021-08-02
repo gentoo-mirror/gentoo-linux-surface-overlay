@@ -37,6 +37,8 @@ src_prepare() {
 	mv "${WORKDIR}/linux-${KV_FULL}" "${WORKDIR}/linux-${KV_FULL}-surface"
 	}
 
+S="${WORKDIR}/linux-${KV_FULL}-surface"
+
 pkg_setup() {
 	ewarn ""
 	ewarn "${PN} is *not* supported by the Gentoo Kernel Project in any way."
