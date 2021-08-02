@@ -30,21 +30,21 @@ SRC_URI="${KERNEL_URI} ${GENPATCHES_URI} ${ARCH_URI}
 		https://raw.githubusercontent.com/linux-surface/linux-surface/master/patches/5.10/0011-cameras.patch
 		https://raw.githubusercontent.com/linux-surface/linux-surface/master/patches/5.10/0012-ath10k-firmware-override.patch "
 
-PATCHES=(  
-	"${FILESDIR}/Makefile.patch"
-	"${DISTDIR}/0001-surface3-oemb.patch"
-	"${DISTDIR}/0002-wifi.patch"
-	"${DISTDIR}/0003-ipts.patch"
-	"${DISTDIR}/0004-surface-gpe.patch"
-	"${DISTDIR}/0005-surface-sam-over-hid.patch"
-	"${DISTDIR}/0006-surface-sam.patch"
-	"${DISTDIR}/0007-surface-hotplug.patch"
-	"${DISTDIR}/0008-surface-typecover.patch"
-	"${DISTDIR}/0009-surface-go-touchscreen.patch"
-	"${DISTDIR}/0010-surface-sensors.patch"
-	"${DISTDIR}/0011-cameras.patch"
-	"${DISTDIR}/0012-ath10k-firmware-override.patch" 
-	)
+src_prepare() {
+	eapply -p2 "${FILESDIR}/Makefile.patch"
+	eapply -p2 "${DISTDIR}/0001-surface3-oemb.patch"
+	eapply -p2 "${DISTDIR}/0002-wifi.patch"
+	eapply -p2 "${DISTDIR}/0003-ipts.patch"
+	eapply -p2 "${DISTDIR}/0004-surface-gpe.patch"
+	eapply -p2 "${DISTDIR}/0005-surface-sam-over-hid.patch"
+	eapply -p2 "${DISTDIR}/0006-surface-sam.patch"
+	eapply -p2 "${DISTDIR}/0007-surface-hotplug.patch"
+	eapply -p2 "${DISTDIR}/0008-surface-typecover.patch"
+	eapply -p2 "${DISTDIR}/0009-surface-go-touchscreen.patch"
+	eapply -p2 "${DISTDIR}/0010-surface-sensors.patch"
+	eapply -p2 "${DISTDIR}/0011-cameras.patch"
+	eapply -p2 "${DISTDIR}/0012-ath10k-firmware-override.patch"
+	}
 
 pkg_setup() {
 	ewarn ""
