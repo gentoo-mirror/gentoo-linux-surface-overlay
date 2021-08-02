@@ -15,7 +15,7 @@ detect_arch
 KEYWORDS="~amd64"
 HOMEPAGE="https://github.com/linux-surface/linux-surface"
 IUSE="experimental"
-#EXTRAVERSION="-${PN}-*"
+EXTRAVERSION="-${PN}-*"
 DESCRIPTION="Full sources including the Gentoo and Surface patchset for the ${KV_MAJOR}.${KV_MINOR} kernel tree."
 SRC_URI="${KERNEL_URI} ${GENPATCHES_URI} ${ARCH_URI}
 		https://raw.githubusercontent.com/linux-surface/linux-surface/master/patches/5.13/0001-surface3-oemb.patch
