@@ -30,7 +30,9 @@ SRC_URI="${KERNEL_URI} ${GENPATCHES_URI} ${ARCH_URI}
 		https://raw.githubusercontent.com/linux-surface/linux-surface/master/patches/5.10/0011-cameras.patch
 		https://raw.githubusercontent.com/linux-surface/linux-surface/master/patches/5.10/0012-ath10k-firmware-override.patch "
 
-S="${WORKDIR}/linux-${KV_FULL}"
+src_unpack() {
+	mv "${WORKDIR}/linux-${KV_FULL}" "${WORKDIR}/linux-${KV_FULL}-surface"
+	}
 
 PATCHES=(  
 	"${FILESDIR}/Makefile.patch"
@@ -48,10 +50,6 @@ PATCHES=(
 	"${DISTDIR}/0012-ath10k-firmware-override.patch" 
 	)
 
-	pkg_preinst () {
-	mv "${WORKDIR}/linux-${KV_FULL}" "${WORKDIR}/linux-${KV_FULL}-surface"
-	}
-
 pkg_setup() {
 	ewarn ""
 	ewarn "${PN} is *not* supported by the Gentoo Kernel Project in any way."
@@ -60,6 +58,11 @@ pkg_setup() {
 	ewarn "the ebuilds. Thank you."
 	ewarn ""
 }
+
+src_prepare() {
+	# kernel-2_src_prepare doesn't apply PATCHES().
+	default
+	}
 
 pkg_postinst() {
 	kernel-2_pkg_postinst
