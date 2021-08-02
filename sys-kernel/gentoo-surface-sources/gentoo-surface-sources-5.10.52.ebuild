@@ -31,6 +31,7 @@ SRC_URI="${KERNEL_URI} ${GENPATCHES_URI} ${ARCH_URI}
 		https://raw.githubusercontent.com/linux-surface/linux-surface/master/patches/5.10/0012-ath10k-firmware-override.patch "
 
 src_prepare() {
+	default
 	sed "s/EXTRAVERSION = -gentoo/EXTRAVERSION = -gentoo-surface/" -i "${WORKDIR}/linux-${KV_FULL}/Makefile"
 	EPATCH_SOURCE="${DISTDIR}" EPATCH_SUFFIX="patch" \
 		EPATCH_FORCE="yes" epatch
