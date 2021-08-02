@@ -47,7 +47,7 @@ PATCHES=(
 	"${DISTDIR}/0012-ath10k-firmware-override.patch" 
 	)
 
-	src_prepare() {
+src_prepare() {
 }
 
 pkg_setup() {
