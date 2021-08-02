@@ -30,8 +30,8 @@ SRC_URI="${KERNEL_URI} ${GENPATCHES_URI} ${ARCH_URI}
 		https://raw.githubusercontent.com/linux-surface/linux-surface/master/patches/5.13/0010-amd-gpio.patch
 		https://raw.githubusercontent.com/linux-surface/linux-surface/master/patches/5.13/0011-amd-s0ix.patch"
 
-unpack_set_extraversion {
-	#
+src_unpack() {
+	unpack_set_extraversion
 }
 
 src_prepare {
