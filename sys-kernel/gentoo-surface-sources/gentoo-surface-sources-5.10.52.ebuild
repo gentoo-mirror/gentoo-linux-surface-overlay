@@ -31,7 +31,7 @@ SRC_URI="${KERNEL_URI} ${GENPATCHES_URI} ${ARCH_URI}
 		https://raw.githubusercontent.com/linux-surface/linux-surface/master/patches/5.10/0012-ath10k-firmware-override.patch "
 
 src_prepare() {
-	cd "{$WORKDIR}/linux-${KV_FULL}"
+	cd "${WORKDIR}/linux-${KV_FULL}"
 	eapply "${FILESDIR}/Makefile.patch"
 	eapply "${DISTDIR}/0001-surface3-oemb.patch"
 	eapply "${DISTDIR}/0002-wifi.patch"
