@@ -31,17 +31,17 @@ SRC_URI="${KERNEL_URI} ${GENPATCHES_URI} ${ARCH_URI}
 
 
 src_prepare() {
-	eapply "${WORKDIR}/0001-surface3-oemb.patch"
-	eapply "${WORKDIR}/0002-mwifiex.patch"
-	eapply "${WORKDIR}/0003-ath10k.patch"
-	eapply "${WORKDIR}/0004-ipts.patch"
-	eapply "${WORKDIR}/0005-surface-sam-over-hid.patch"
-	eapply "${WORKDIR}/0006-surface-sam.patch"
-	eapply "${WORKDIR}/0007-surface-hotplug.patch"
-	eapply "${WORKDIR}/0008-surface-typecover.patch"
-	eapply "${WORKDIR}/0009-cameras.patch"
-	eapply "${WORKDIR}/0010-amd-gpio.patch"
-	eapply "${WORKDIR}/0011-amd-s0ix.patch"
+	eapply "${DISTDIR}/0001-surface3-oemb.patch"
+	eapply "${DISTDIR}/0002-mwifiex.patch"
+	eapply "${DISTDIR}/0003-ath10k.patch"
+	eapply "${DISTDIR}/0004-ipts.patch"
+	eapply "${DISTDIR}/0005-surface-sam-over-hid.patch"
+	eapply "${DISTDIR}/0006-surface-sam.patch"
+	eapply "${DISTDIR}/0007-surface-hotplug.patch"
+	eapply "${DISTDIR}/0008-surface-typecover.patch"
+	eapply "${DISTDIR}/0009-cameras.patch"
+	eapply "${DISTDIR}/0010-amd-gpio.patch"
+	eapply "${DISTDIR}/0011-amd-s0ix.patch"
 	eapply_user
 }
 
