@@ -30,7 +30,7 @@ SRC_URI="${KERNEL_URI} ${GENPATCHES_URI} ${ARCH_URI}
 		https://raw.githubusercontent.com/linux-surface/linux-surface/master/patches/5.10/0011-cameras.patch
 		https://raw.githubusercontent.com/linux-surface/linux-surface/master/patches/5.10/0012-ath10k-firmware-override.patch "
 
-S="${WORKDIR}/linux-${KV_MAJOR}"
+S="${WORKDIR}/linux-${KV_FULL}"
 
 PATCHES=(  
 	"${DISTDIR}/0001-surface3-oemb.patch"
