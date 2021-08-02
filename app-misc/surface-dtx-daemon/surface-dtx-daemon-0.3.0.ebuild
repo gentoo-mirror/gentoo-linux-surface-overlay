@@ -3,8 +3,6 @@
 
 EAPI=7
 
-inherit cargo git-r3
-
 DESCRIPTION="Utility to control attach/detach of clipboard on Surface Book devices."
 HOMEPAGE="https://github.com/linux-surface/linux-surface"
 SRC_URI="https://github.com/linux-surface/surface-dtx-daemon/releases/download/v${PV}-1/${PN}_${PV}-1_amd64.deb"
