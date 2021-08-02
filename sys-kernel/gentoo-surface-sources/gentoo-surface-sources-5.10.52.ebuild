@@ -47,9 +47,6 @@ PATCHES=(
 	"${DISTDIR}/0012-ath10k-firmware-override.patch" 
 	)
 
-src_prepare() {
-}
-
 pkg_setup() {
 	ewarn ""
 	ewarn "${PN} is *not* supported by the Gentoo Kernel Project in any way."
