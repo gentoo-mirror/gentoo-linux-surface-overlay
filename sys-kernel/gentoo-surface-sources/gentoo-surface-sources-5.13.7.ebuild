@@ -32,7 +32,7 @@ SRC_URI="${KERNEL_URI} ${GENPATCHES_URI} ${ARCH_URI}
 src_prepare() {
 	sed "s/EXTRAVERSION = -gentoo/EXTRAVERSION = -gentoo-surface/" -i "${WORKDIR}/linux-${KV_FULL}/Makefile"
 	EPATCH_SOURCE="${DISTDIR}" EPATCH_SUFFIX="patch" \
-		EPATCH_FORCE="yes" epatch -p2
+		EPATCH_FORCE="yes" epatch -f0
 	mv "${WORKDIR}/linux-${KV_FULL}" "${WORKDIR}/linux-${KV_FULL}-surface"
 	}
 
