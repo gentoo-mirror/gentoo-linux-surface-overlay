@@ -5,7 +5,7 @@ EAPI="6"
 ETYPE="sources"
 K_SECURITY_UNSUPPORTED="1"
 K_WANT_GENPATCHES="base extras experimental"
-K_GENPATCHES_VER="10"
+K_GENPATCHES_VER="9"
 
 inherit kernel-2
 inherit eutils
