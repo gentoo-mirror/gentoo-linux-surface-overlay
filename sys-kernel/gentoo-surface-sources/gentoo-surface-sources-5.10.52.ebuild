@@ -44,6 +44,7 @@ src_prepare() {
 	eapply -p2 "${DISTDIR}/0010-surface-sensors.patch"
 	eapply -p2 "${DISTDIR}/0011-cameras.patch"
 	eapply -p2 "${DISTDIR}/0012-ath10k-firmware-override.patch"
+	mv "${WORKDIR}/linux-${KV_FULL}" "${WORKDIR}/linux-${KV_FULL}-surface"
 	}
 
 pkg_setup() {
@@ -54,12 +55,6 @@ pkg_setup() {
 	ewarn "the ebuilds. Thank you."
 	ewarn ""
 }
-
-src_prepare() {
-	# kernel-2_src_prepare doesn't apply PATCHES().
-	default
-	mv "${WORKDIR}/linux-${KV_FULL}" "${WORKDIR}/linux-${KV_FULL}-surface"
-	}
 
 pkg_postinst() {
 	kernel-2_pkg_postinst
