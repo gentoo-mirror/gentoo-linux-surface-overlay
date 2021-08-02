@@ -7,6 +7,7 @@ inherit cargo git-r3
 
 DESCRIPTION="Utility to control attach/detach of clipboard on Surface Book devices."
 HOMEPAGE="https://github.com/linux-surface/linux-surface"
+SRC_URI="https://github.com/linux-surface/surface-dtx-daemon/releases/download/v${PV}-1/${PN}_${PV}-1_amd64.deb"
 
 LICENSE="MIT"
 SLOT="0"
@@ -16,19 +17,18 @@ DEPEND=""
 RDEPEND="${DEPEND}"
 BDEPEND=""
 
-EGIT_REPO_URI="https://github.com/linux-surface/surface-dtx-daemon"
-S="${WORKDIR}/surface-dtx-daemon-9999"
+S="${WORKDIR}"
 
-src_unpack() {
-	git-r3_src_unpack
-	cargo_live_src_unpack
+src_prepare() {
+	unpack ./control.tar.xz
+	unpack ./data.tar.xz
+
+	eapply_user
+
 }
 
-src_compile() {
-	rm -f Cargo.toml
-	cd surface-dtx-daemon
-	cargo_src_compile --locked
-	cd ../surface-dtx-userd
-	cargo_src_compile --locked
+src_install() {
+	doins -r etc
+	doins -r usr
 }
 
