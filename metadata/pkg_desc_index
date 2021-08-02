@@ -1,5 +1,5 @@
 app-misc/surface-control 9999: Commandline utility to control certain aspects of your surface device.
-app-misc/surface-dtx-daemon 9999: Utility to control attach/detach of clipboard on Surface Book devices.
+app-misc/surface-dtx-daemon 0.3.0: Utility to control attach/detach of clipboard on Surface Book devices.
 dev-libs/libwacom-surface 1.9: Library for identifying Wacom tablets and their model-specific features with patches from linux-surface
 sys-firmware/iptsd 0.4: Userspace daemon for Intel Precise Touch & Stylus
 sys-kernel/gentoo-surface-sources 5.10.52: Full sources including the Gentoo and Surface patchset for the 5.10 kernel tree.

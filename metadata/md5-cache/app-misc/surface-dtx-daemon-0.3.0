@@ -1,5 +1,5 @@
 BDEPEND=>=virtual/rust-1.37.0 >=dev-vcs/git-1.8.2.1[curl]
-DEFINED_PHASES=compile configure install test unpack
+DEFINED_PHASES=compile configure install prepare test unpack
 DESCRIPTION=Utility to control attach/detach of clipboard on Surface Book devices.
 EAPI=7
 HOMEPAGE=https://github.com/linux-surface/linux-surface
@@ -9,5 +9,6 @@ KEYWORDS=~amd64 ~x86
 LICENSE=MIT
 PROPERTIES=live
 SLOT=0
+SRC_URI=https://github.com/linux-surface/surface-dtx-daemon/releases/download/v0.3.0-1/surface-dtx-daemon_0.3.0-1_amd64.deb
 _eclasses_=multiprocessing	61c959fc55c15c00bbb1079d6a71370b	toolchain-funcs	9ea1c67b6f8315fdc2568abb674519aa	multilib	97566c1a256d07b00848aa767e38a352	cargo	c7fefacaebdcb455d2a7b59429eb47a6	git-r3	cc875b0c1e9b3bdac1af0f82f3ba29da
-_md5_=48c22512b6c3c42bec117217a4195426
+_md5_=ea0aa44ae380d548feb4a202cb64a568
