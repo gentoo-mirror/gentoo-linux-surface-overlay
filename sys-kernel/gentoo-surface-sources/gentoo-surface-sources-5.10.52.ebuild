@@ -31,20 +31,9 @@ SRC_URI="${KERNEL_URI} ${GENPATCHES_URI} ${ARCH_URI}
 		https://raw.githubusercontent.com/linux-surface/linux-surface/master/patches/5.10/0012-ath10k-firmware-override.patch "
 
 src_prepare() {
-	cd "${WORKDIR}/linux-${KV_FULL}"
-	sed "s/EXTRAVERSION = -gentoo/EXTRAVERSION = -gentoo-surface/" -i "${WORKDIR}/linux-${KV_FULL}/Makefile" 
-	eapply "${DISTDIR}/0001-surface3-oemb.patch"
-	eapply "${DISTDIR}/0002-wifi.patch"
-	eapply "${DISTDIR}/0003-ipts.patch"
-	eapply "${DISTDIR}/0004-surface-gpe.patch"
-	eapply "${DISTDIR}/0005-surface-sam-over-hid.patch"
-	eapply "${DISTDIR}/0006-surface-sam.patch"
-	eapply "${DISTDIR}/0007-surface-hotplug.patch"
-	eapply "${DISTDIR}/0008-surface-typecover.patch"
-	eapply "${DISTDIR}/0009-surface-go-touchscreen.patch"
-	eapply "${DISTDIR}/0010-surface-sensors.patch"
-	eapply "${DISTDIR}/0011-cameras.patch"
-	eapply "${DISTDIR}/0012-ath10k-firmware-override.patch"
+	sed "s/EXTRAVERSION = -gentoo/EXTRAVERSION = -gentoo-surface/" -i "${WORKDIR}/linux-${KV_FULL}/Makefile"
+	EPATCH_SOURCE="${DISTDIR}/files/" EPATCH_SUFFIX="patch" \
+		EPATCH_FORCE="yes" epatch
 	mv "${WORKDIR}/linux-${KV_FULL}" "${WORKDIR}/linux-${KV_FULL}-surface"
 	}
 
