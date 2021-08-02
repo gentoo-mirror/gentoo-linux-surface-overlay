@@ -34,7 +34,7 @@ src_prepare() {
 	sed "s/EXTRAVERSION = -gentoo/EXTRAVERSION = -gentoo-surface/" -i "${WORKDIR}/linux-${KV_FULL}/Makefile"
 	EPATCH_SOURCE="${DISTDIR}" EPATCH_SUFFIX="patch" \
 		EPATCH_FORCE="yes"
-#	mv "${WORKDIR}/linux-${KV_FULL}" "${WORKDIR}/linux-${KV_FULL}-surface"
+	mv "${WORKDIR}/linux-${KV_FULL}" "${WORKDIR}/linux-${KV_FULL}-surface"
 	}
 
 pkg_setup() {
