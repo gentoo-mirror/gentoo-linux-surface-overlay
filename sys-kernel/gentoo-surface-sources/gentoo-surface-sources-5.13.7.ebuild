@@ -34,8 +34,7 @@ SRC_URI="${KERNEL_URI} ${GENPATCHES_URI} ${ARCH_URI}
 src_prepare() {
 	unpack_set_extraversion
 	mv "${WORKDIR}/linux-${KV_FULL}" "${WORKDIR}/linux-${KV_FULL}-surface"
-	S="${WORKDIR}/linux-${KV_FULL}-surface"
-	sed "s/EXTRAVERSION = -gentoo/EXTRAVERSION = -gentoo-surface/" -i "${WORKDIR}/linux-${KV_FULL}/Makefile"
+	#S="${WORKDIR}/linux-${KV_FULL}-surface"
 	eapply "${DISTDIR}/0001-surface3-oemb.patch"
 	eapply "${DISTDIR}/0002-mwifiex.patch"
 	eapply "${DISTDIR}/0003-ath10k.patch"
