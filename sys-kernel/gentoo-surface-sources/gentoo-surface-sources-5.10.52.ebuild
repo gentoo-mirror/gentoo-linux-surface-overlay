@@ -30,8 +30,6 @@ SRC_URI="${KERNEL_URI} ${GENPATCHES_URI} ${ARCH_URI}
 		https://raw.githubusercontent.com/linux-surface/linux-surface/master/patches/5.10/0011-cameras.patch
 		https://raw.githubusercontent.com/linux-surface/linux-surface/master/patches/5.10/0012-ath10k-firmware-override.patch "
 
-S="${WORKDIR}/linux-${KV_FULL}"
-
 PATCHES=(  
 	"${FILESDIR}/Makefile.patch"
 	"${DISTDIR}/0001-surface3-oemb.patch"
@@ -57,8 +55,13 @@ pkg_setup() {
 	ewarn ""
 }
 
-pkg_postinst() {
+src_prepare() {
+	# kernel-2_src_prepare doesn't apply PATCHES().
+	default
 	mv "${WORKDIR}/linux-${KV_FULL}" "${WORKDIR}/linux-${KV_FULL}-surface"
+	}
+
+pkg_postinst() {
 	kernel-2_pkg_postinst
 	einfo "For more info on this patchset, and how to report problems, see:"
 	einfo "${HOMEPAGE}"
