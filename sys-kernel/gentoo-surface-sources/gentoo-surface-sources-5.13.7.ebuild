@@ -44,8 +44,8 @@ src_prepare() {
 	eapply "${DISTDIR}/0011-amd-s0ix.patch"
 	eapply_user
 
-	mv "${WORKDIR}/linux-${KV_FULL}" "${WORKDIR}/linux-${KV_FULL}-surface"
-	S="${WORKDIR}/linux-${KV_FULL}-surface"
+#	mv "${WORKDIR}/linux-${KV_FULL}" "${WORKDIR}/linux-${KV_FULL}-surface"
+#	S="${WORKDIR}/linux-${KV_FULL}-surface"
 	}
 
 pkg_setup() {
