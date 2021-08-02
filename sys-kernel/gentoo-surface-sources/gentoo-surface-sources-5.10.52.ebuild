@@ -29,16 +29,16 @@ SRC_URI="${KERNEL_URI} ${GENPATCHES_URI} ${ARCH_URI}
 		https://raw.githubusercontent.com/linux-surface/linux-surface/master/patches/5.10/0010-surface-sensors.patch
 		https://raw.githubusercontent.com/linux-surface/linux-surface/master/patches/5.10/0011-cameras.patch
 		https://raw.githubusercontent.com/linux-surface/linux-surface/master/patches/5.10/0012-ath10k-firmware-override.patch "
+S="${WORKDIR}/linux-${KV_FULL}-surface"
 
 src_prepare() {
 	default
 	sed "s/EXTRAVERSION = -gentoo/EXTRAVERSION = -gentoo-surface/" -i "${WORKDIR}/linux-${KV_FULL}/Makefile"
 	EPATCH_SOURCE="${DISTDIR}" EPATCH_SUFFIX="patch" \
 		EPATCH_FORCE="yes" epatch
-	mv "${WORKDIR}/linux-${KV_FULL}" "${WORKDIR}/linux-${KV_FULL}-surface"
+#	mv "${WORKDIR}/linux-${KV_FULL}" "${WORKDIR}/linux-${KV_FULL}-surface"
 	}
 
-S="${WORKDIR}/linux-${KV_FULL}-surface"
 
 pkg_setup() {
 	ewarn ""
