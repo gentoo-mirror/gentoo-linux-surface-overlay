@@ -28,5 +28,7 @@ src_prepare() {
 src_install() {
 	doins -r etc
 	doins -r usr
+	fperms 0755 /usr/bin/surface-dtx-userd
+	fperms 0755 /usr/bin/surface-dtx-daemon
 }
 
