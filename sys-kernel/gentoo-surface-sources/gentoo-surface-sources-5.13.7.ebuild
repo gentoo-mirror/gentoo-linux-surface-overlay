@@ -30,12 +30,12 @@ SRC_URI="${KERNEL_URI} ${GENPATCHES_URI} ${ARCH_URI}
 		https://raw.githubusercontent.com/linux-surface/linux-surface/master/patches/5.13/0011-amd-s0ix.patch"
 
 src_prepare() {
-	mv "${WORKDIR}/linux-${KV_FULL}" "${WORKDIR}/linux-${KV_FULL}-surface"
-	S="${WORKDIR}/linux-${KV_FULL}-surface"
 	default
 	sed "s/EXTRAVERSION = -gentoo/EXTRAVERSION = -gentoo-surface/" -i "${WORKDIR}/linux-${KV_FULL}/Makefile"
 	EPATCH_SOURCE="${DISTDIR}" EPATCH_SUFFIX="patch" \
 		EPATCH_FORCE="yes"
+	mv "${WORKDIR}/linux-${KV_FULL}" "${WORKDIR}/linux-${KV_FULL}-surface"
+	S="${WORKDIR}/linux-${KV_FULL}-surface"
 	}
 
 pkg_setup() {
