@@ -48,6 +48,10 @@ PATCHES=(
 	"${DISTDIR}/0012-ath10k-firmware-override.patch" 
 	)
 
+	pkg_preinst () {
+	mv "${WORKDIR}/linux-${KV_FULL}" "${WORKDIR}/linux-${KV_FULL}-surface"
+	}
+
 pkg_setup() {
 	ewarn ""
 	ewarn "${PN} is *not* supported by the Gentoo Kernel Project in any way."
@@ -58,7 +62,6 @@ pkg_setup() {
 }
 
 pkg_postinst() {
-	mv "${WORKDIR}/linux-${KV_FULL}" "${WORKDIR}/linux-${KV_FULL}-surface"
 	kernel-2_pkg_postinst
 	einfo "For more info on this patchset, and how to report problems, see:"
 	einfo "${HOMEPAGE}"
