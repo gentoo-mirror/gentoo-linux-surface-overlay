@@ -18,7 +18,7 @@ BDEPEND=""
 S="${WORKDIR}"
 
 src_prepare() {
-	unpack ./control.tar.xz
+	unpack ./control.tar.gz
 	unpack ./data.tar.xz
 
 	eapply_user
