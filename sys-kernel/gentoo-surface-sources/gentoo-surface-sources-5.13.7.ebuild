@@ -30,11 +30,11 @@ SRC_URI="${KERNEL_URI} ${GENPATCHES_URI} ${ARCH_URI}
 		https://raw.githubusercontent.com/linux-surface/linux-surface/master/patches/5.13/0010-amd-gpio.patch
 		https://raw.githubusercontent.com/linux-surface/linux-surface/master/patches/5.13/0011-amd-s0ix.patch"
 
-src_unpack() {
+src_unpack {
 	unpack_set_extraversion
 }
 
-src_prepare() {
+src_prepare {
 	eapply "${DISTDIR}/0001-surface3-oemb.patch"
 	eapply "${DISTDIR}/0002-mwifiex.patch"
 	eapply "${DISTDIR}/0003-ath10k.patch"
@@ -47,7 +47,6 @@ src_prepare() {
 	eapply "${DISTDIR}/0010-amd-gpio.patch"
 	eapply "${DISTDIR}/0011-amd-s0ix.patch"
 	eapply_user
-
 #	mv "${WORKDIR}/linux-${KV_FULL}" "${WORKDIR}/linux-${KV_FULL}-surface"
 #	S="${WORKDIR}/linux-${KV_FULL}-surface"
 }
