@@ -35,8 +35,6 @@ src_unpack() {
 }
 
 src_prepare() {
-	mv "${WORKDIR}/linux-${KV_FULL}" "${WORKDIR}/linux-${KV_FULL}-surface"
-	#S="${WORKDIR}/linux-${KV_FULL}-surface"
 	eapply "${DISTDIR}/0001-surface3-oemb.patch"
 	eapply "${DISTDIR}/0002-mwifiex.patch"
 	eapply "${DISTDIR}/0003-ath10k.patch"
