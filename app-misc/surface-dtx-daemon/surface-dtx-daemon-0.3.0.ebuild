@@ -30,5 +30,7 @@ src_install() {
 	doins -r usr
 	fperms 0755 /usr/bin/surface-dtx-userd
 	fperms 0755 /usr/bin/surface-dtx-daemon
+	fperms 0755 /etc/surface-dtx-daemon/attach.sh
+	fperms 0755 /etc/surface-dtx-daemon/detatch.sh
 }
 
