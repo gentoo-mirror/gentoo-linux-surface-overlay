@@ -32,7 +32,7 @@ SRC_URI="${KERNEL_URI} ${GENPATCHES_URI} ${ARCH_URI}
 
 src_prepare() {
 	cd "${WORKDIR}/linux-${KV_FULL}"
-	eapply "${FILESDIR}/Makefile.patch"
+	sed "s/EXTRAVERSION = -gentoo/EXTRAVERSION = -gentoo-surface/" -i ${WORKDIR}/linux-${KV_FULL}/Makefile" 
 	eapply "${DISTDIR}/0001-surface3-oemb.patch"
 	eapply "${DISTDIR}/0002-wifi.patch"
 	eapply "${DISTDIR}/0003-ipts.patch"
