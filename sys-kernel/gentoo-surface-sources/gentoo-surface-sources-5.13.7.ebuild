@@ -30,6 +30,7 @@ SRC_URI="${KERNEL_URI} ${GENPATCHES_URI} ${ARCH_URI}
 		https://raw.githubusercontent.com/linux-surface/linux-surface/master/patches/5.13/0011-amd-s0ix.patch"
 
 src_prepare() {
+	echo "S=$S"; pwd; ls -la ; find -name surface3-wmi.c -ls
 	eapply "${DISTDIR}/0001-surface3-oemb.patch"
 	eapply "${DISTDIR}/0002-mwifiex.patch"
 	eapply "${DISTDIR}/0003-ath10k.patch"
