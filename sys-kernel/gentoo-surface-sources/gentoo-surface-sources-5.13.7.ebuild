@@ -31,17 +31,17 @@ SRC_URI="${KERNEL_URI} ${GENPATCHES_URI} ${ARCH_URI}
 
 src_prepare() {
 	#echo "S=$S"; pwd; ls -la ; find -name surface3-wmi.c -ls
-	eapply -p1 "${DISTDIR}/0001-surface3-oemb.patch"
-	eapply -p1 "${DISTDIR}/0002-mwifiex.patch"
-	eapply -p1 "${DISTDIR}/0003-ath10k.patch"
-	eapply -p1 "${DISTDIR}/0004-ipts.patch"
-	eapply -p1 "${DISTDIR}/0005-surface-sam-over-hid.patch"
-	eapply -p1 "${DISTDIR}/0006-surface-sam.patch"
-	eapply -p1 "${DISTDIR}/0007-surface-hotplug.patch"
-	eapply -p1 "${DISTDIR}/0008-surface-typecover.patch"
-	eapply -p1 "${DISTDIR}/0009-cameras.patch"
-	eapply -p1 "${DISTDIR}/0010-amd-gpio.patch"
-	eapply -p1 "${DISTDIR}/0011-amd-s0ix.patch"
+	eapply -p2 "${DISTDIR}/0001-surface3-oemb.patch"
+	eapply -p2 "${DISTDIR}/0002-mwifiex.patch"
+	eapply -p2 "${DISTDIR}/0003-ath10k.patch"
+	eapply -p2 "${DISTDIR}/0004-ipts.patch"
+	eapply -p2 "${DISTDIR}/0005-surface-sam-over-hid.patch"
+	eapply -p2 "${DISTDIR}/0006-surface-sam.patch"
+	eapply -p2 "${DISTDIR}/0007-surface-hotplug.patch"
+	eapply -p2 "${DISTDIR}/0008-surface-typecover.patch"
+	eapply -p2 "${DISTDIR}/0009-cameras.patch"
+	eapply -p2 "${DISTDIR}/0010-amd-gpio.patch"
+	eapply -p2 "${DISTDIR}/0011-amd-s0ix.patch"
 	eapply_user
 #	mv "${WORKDIR}/linux-${KV_FULL}" "${WORKDIR}/linux-${KV_FULL}-surface"
 #	S="${WORKDIR}/linux-${KV_FULL}-surface"
