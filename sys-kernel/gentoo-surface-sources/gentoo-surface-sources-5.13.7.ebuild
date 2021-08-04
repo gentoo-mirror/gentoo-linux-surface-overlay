@@ -30,6 +30,8 @@ SRC_URI="${KERNEL_URI} ${GENPATCHES_URI} ${ARCH_URI}
 "
 
 src_prepare() {
+	eapply_user
+
 	local SURFACE_PATCH
 	local SURFACE_PATCHES="
 	0001-surface3-oemb.patch
