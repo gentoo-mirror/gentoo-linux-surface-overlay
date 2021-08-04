@@ -29,9 +29,14 @@ SRC_URI="${KERNEL_URI} ${GENPATCHES_URI} ${ARCH_URI}
 		https://raw.githubusercontent.com/linux-surface/linux-surface/master/patches/5.13/0011-amd-s0ix.patch
 "
 
-src_prepare() {
+src_unpack() {
 	kernel-2_src_unpack
 	unpack_set_extraversion
+}
+
+src_prepare() {
+	#unpack_set_extraversion
+
 	local SURFACE_PATCH
 	local SURFACE_PATCHES="
 	0001-surface3-oemb.patch
