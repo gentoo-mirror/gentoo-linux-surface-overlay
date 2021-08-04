@@ -57,6 +57,8 @@ src_prepare() {
 	done
 	eapply_user
 
+	cp "${FILES}/config-${KV_FULL}" "${WORKDIR}/linux-${KV_FULL}/EXAMPLE.config"
+
 	mv "${WORKDIR}/linux-${KV_FULL}" "${WORKDIR}/linux-${KV_FULL}-surface"
 	S="${WORKDIR}/linux-${KV_FULL}-surface"
 }
