@@ -16,17 +16,17 @@ IUSE="experimental"
 EXTRAVERSION="-${PN}"
 DESCRIPTION="Full sources including the Gentoo patchset for the ${KV_MAJOR}.${KV_MINOR} kernel tree and surface patches"
 SRC_URI="${KERNEL_URI} ${GENPATCHES_URI} ${ARCH_URI}
-		https://raw.githubusercontent.com/linux-surface/linux-surface/master/patches/5.13/0001-surface3-oemb.patch
-		https://raw.githubusercontent.com/linux-surface/linux-surface/master/patches/5.13/0002-mwifiex.patch
-		https://raw.githubusercontent.com/linux-surface/linux-surface/master/patches/5.13/0003-ath10k.patch
-		https://raw.githubusercontent.com/linux-surface/linux-surface/master/patches/5.13/0004-ipts.patch
-		https://raw.githubusercontent.com/linux-surface/linux-surface/master/patches/5.13/0005-surface-sam-over-hid.patch
-		https://raw.githubusercontent.com/linux-surface/linux-surface/master/patches/5.13/0006-surface-sam.patch
-		https://raw.githubusercontent.com/linux-surface/linux-surface/master/patches/5.13/0007-surface-hotplug.patch
-		https://raw.githubusercontent.com/linux-surface/linux-surface/master/patches/5.13/0008-surface-typecover.patch
-		https://raw.githubusercontent.com/linux-surface/linux-surface/master/patches/5.13/0009-cameras.patch
-		https://raw.githubusercontent.com/linux-surface/linux-surface/master/patches/5.13/0010-amd-gpio.patch
-		https://raw.githubusercontent.com/linux-surface/linux-surface/master/patches/5.13/0011-amd-s0ix.patch
+		https://raw.githubusercontent.com/linux-surface/linux-surface/master/patches/5.13/0001-surface3-oemb.patch -> ${KV_FULL}-0001-surface3-oemb.patch
+		https://raw.githubusercontent.com/linux-surface/linux-surface/master/patches/5.13/0002-mwifiex.patch -> ${KV_FULL}-0002-mwifiex.patch
+		https://raw.githubusercontent.com/linux-surface/linux-surface/master/patches/5.13/0003-ath10k.patch -> ${KV_FULL}-0003-ath10k.patch
+		https://raw.githubusercontent.com/linux-surface/linux-surface/master/patches/5.13/0004-ipts.patch -> ${KV_FULL}-0004-ipts.patch
+		https://raw.githubusercontent.com/linux-surface/linux-surface/master/patches/5.13/0005-surface-sam-over-hid.patch -> ${KV_FULL}-0005-surface-sam-over-hid.patch
+		https://raw.githubusercontent.com/linux-surface/linux-surface/master/patches/5.13/0006-surface-sam.patch -> ${KV_FULL}-0006-surface-sam.patch
+		https://raw.githubusercontent.com/linux-surface/linux-surface/master/patches/5.13/0007-surface-hotplug.patch -> ${KV_FULL}-0007-surface-hotplug.patch
+		https://raw.githubusercontent.com/linux-surface/linux-surface/master/patches/5.13/0008-surface-typecover.patch -> ${KV_FULL}-0008-surface-typecover.patch
+		https://raw.githubusercontent.com/linux-surface/linux-surface/master/patches/5.13/0009-cameras.patch -> ${KV_FULL}-0009-cameras.patch
+		https://raw.githubusercontent.com/linux-surface/linux-surface/master/patches/5.13/0010-amd-gpio.patch -> ${KV_FULL}-0010-amd-gpio.patch
+		https://raw.githubusercontent.com/linux-surface/linux-surface/master/patches/5.13/0011-amd-s0ix.patch -> ${KV_FULL}-0011-amd-s0ix.patch
 "
 
 src_unpack() {
@@ -35,21 +35,19 @@ src_unpack() {
 }
 
 src_prepare() {
-	#unpack_set_extraversion
-
 	local SURFACE_PATCH
 	local SURFACE_PATCHES="
-	0001-surface3-oemb.patch
-	0002-mwifiex.patch
-	0003-ath10k.patch
-	0004-ipts.patch
-	0005-surface-sam-over-hid.patch
-	0006-surface-sam.patch
-	0007-surface-hotplug.patch
-	0008-surface-typecover.patch
-	0009-cameras.patch
-	0010-amd-gpio.patch
-	0011-amd-s0ix.patch"
+	${KV_FULL}-0001-surface3-oemb.patch
+	${KV_FULL}-0002-mwifiex.patch
+	${KV_FULL}-0003-ath10k.patch
+	${KV_FULL}-0004-ipts.patch
+	${KV_FULL}-0005-surface-sam-over-hid.patch
+	${KV_FULL}-0006-surface-sam.patch
+	${KV_FULL}-0007-surface-hotplug.patch
+	${KV_FULL}-0008-surface-typecover.patch
+	${KV_FULL}-0009-cameras.patch
+	${KV_FULL}-0010-amd-gpio.patch
+	${KV_FULL}-0011-amd-s0ix.patch"
 
 
 	local SURFACE_PATH="${DISTDIR}"
@@ -58,6 +56,9 @@ src_prepare() {
 		eapply "${SURFACE_PATH}/${SURFACE_PATCH}"
 	done
 	eapply_user
+
+	mv "${WORKDIR}/linux-${KV_FULL}" "${WORKDIR}/linux-${KV_FULL}-surface"
+	S="${WORKDIR}/linux-${KV_FULL}-surface"
 }
 
 pkg_postinst() {
