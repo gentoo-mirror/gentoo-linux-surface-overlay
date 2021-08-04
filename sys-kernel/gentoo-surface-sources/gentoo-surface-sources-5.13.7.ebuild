@@ -30,19 +30,11 @@ SRC_URI="${KERNEL_URI} ${GENPATCHES_URI} ${ARCH_URI}
 "
 
 src_unpack() {
-	default
-	if [[ -n ${A} ]]; then
-		#unpack_set_extraversion
-		echo
-	else
-		die
-		fi
+	kernel-2_src_unpack
+	unpack_set_extraversion
 }
 
 src_prepare() {
-	echo here
-	unpack_set_extraversion
-	echo there
 	local SURFACE_PATCH
 	local SURFACE_PATCHES="
 	0001-surface3-oemb.patch
