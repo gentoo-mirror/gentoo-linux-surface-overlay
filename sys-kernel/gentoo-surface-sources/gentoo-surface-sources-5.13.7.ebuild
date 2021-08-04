@@ -16,10 +16,10 @@ IUSE="experimental"
 EXTRAVERSION="-${PN}"
 DESCRIPTION="Full sources including the Gentoo patchset for the ${KV_MAJOR}.${KV_MINOR} kernel tree and surface patches"
 SRC_URI="${KERNEL_URI} ${GENPATCHES_URI} ${ARCH_URI}
-		https://raw.githubusercontent.com/linux-surface/linux-surface/master/patches/5.13/0001-surface3-oemb.patch -> {$KV_FULL}-0001-surface3-oemb.patch
-		https://raw.githubusercontent.com/linux-surface/linux-surface/master/patches/5.13/0002-mwifiex.patch -> {$KV_FULL}-0002-mwifiex.patch
-		https://raw.githubusercontent.com/linux-surface/linux-surface/master/patches/5.13/0003-ath10k.patch -> {$KV_FULL}-0003-ath10k.patch
-		https://raw.githubusercontent.com/linux-surface/linux-surface/master/patches/5.13/0004-ipts.patch -> {$KV_FULL}-0004-ipts.patch
+		https://raw.githubusercontent.com/linux-surface/linux-surface/master/patches/5.13/0001-surface3-oemb.patch -> ${KV_FULL}-0001-surface3-oemb.patch
+		https://raw.githubusercontent.com/linux-surface/linux-surface/master/patches/5.13/0002-mwifiex.patch -> ${KV_FULL}-0002-mwifiex.patch
+		https://raw.githubusercontent.com/linux-surface/linux-surface/master/patches/5.13/0003-ath10k.patch -> ${KV_FULL}-0003-ath10k.patch
+		https://raw.githubusercontent.com/linux-surface/linux-surface/master/patches/5.13/0004-ipts.patch -> ${KV_FULL}-0004-ipts.patch
 		https://raw.githubusercontent.com/linux-surface/linux-surface/master/patches/5.13/0005-surface-sam-over-hid.patch -> ${KV_FULL}-0005-surface-sam-over-hid.patch
 		https://raw.githubusercontent.com/linux-surface/linux-surface/master/patches/5.13/0006-surface-sam.patch -> ${KV_FULL}-0006-surface-sam.patch
 		https://raw.githubusercontent.com/linux-surface/linux-surface/master/patches/5.13/0007-surface-hotplug.patch -> ${KV_FULL}-0007-surface-hotplug.patch
