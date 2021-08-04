@@ -15,6 +15,7 @@ detect_arch
 KEYWORDS="~amd64"
 HOMEPAGE="https://github.com/linux-surface/linux-surface"
 IUSE="experimental"
+EXTRAVERSION="-${PN}-*"
 DESCRIPTION="Full sources including the Gentoo and Surface patchset for the ${KV_MAJOR}.${KV_MINOR} kernel tree."
 SRC_URI="${KERNEL_URI} ${GENPATCHES_URI} ${ARCH_URI}
 		https://raw.githubusercontent.com/linux-surface/linux-surface/master/patches/5.13/0001-surface3-oemb.patch
@@ -31,6 +32,7 @@ SRC_URI="${KERNEL_URI} ${GENPATCHES_URI} ${ARCH_URI}
 
 src_prepare() {
 	default
+	unpack_set_extraversion
 	#echo "S=$S"; pwd; ls -la ; find -name surface3-wmi.c -ls
 	#eapply "${DISTDIR}/0001-surface3-oemb.patch"
 	#eapply "${DISTDIR}/0002-mwifiex.patch"
