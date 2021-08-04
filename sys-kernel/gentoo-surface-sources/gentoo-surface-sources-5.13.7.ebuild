@@ -30,9 +30,12 @@ SRC_URI="${KERNEL_URI} ${GENPATCHES_URI} ${ARCH_URI}
 "
 
 src_unpack() {
-	default
-	unpack_set_extraversion
-	}
+	if [[ -n ${A} ]]; then
+		unpack_set_extraversion
+	else
+		die
+		fi
+}
 
 src_prepare() {
 	local SURFACE_PATCH
