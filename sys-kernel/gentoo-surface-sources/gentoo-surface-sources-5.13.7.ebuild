@@ -32,17 +32,17 @@ SRC_URI="${KERNEL_URI} ${GENPATCHES_URI} ${ARCH_URI}
 src_prepare() {
 	local SURFACE_PATCH
 	local SURFACE_PATCHES="
-	${DISTDIR}/0001-surface3-oemb.patch
-	${DISTDIR}/0002-mwifiex.patch
-	${DISTDIR}/0003-ath10k.patch
-	${DISTDIR}/0004-ipts.patch
-	${DISTDIR}/0005-surface-sam-over-hid.patch
-	${DISTDIR}/0006-surface-sam.patch
-	${DISTDIR}/0007-surface-hotplug.patch
-	${DISTDIR}/0008-surface-typecover.patch
-	${DISTDIR}/0009-cameras.patch
-	${DISTDIR}/0010-amd-gpio.patch
-	${DISTDIR}/0011-amd-s0ix.patch"
+	0001-surface3-oemb.patch
+	0002-mwifiex.patch
+	0003-ath10k.patch
+	0004-ipts.patch
+	0005-surface-sam-over-hid.patch
+	0006-surface-sam.patch
+	0007-surface-hotplug.patch
+	0008-surface-typecover.patch
+	0009-cameras.patch
+	0010-amd-gpio.patch
+	0011-amd-s0ix.patch"
 
 
 	local SURFACE_PATH="${DISTDIR}"
