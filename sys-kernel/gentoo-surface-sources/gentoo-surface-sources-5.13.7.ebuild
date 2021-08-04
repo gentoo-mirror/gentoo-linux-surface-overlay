@@ -40,7 +40,9 @@ src_unpack() {
 }
 
 src_prepare() {
+	echo here
 	unpack_set_extraversion
+	echo there
 	local SURFACE_PATCH
 	local SURFACE_PATCHES="
 	0001-surface3-oemb.patch
