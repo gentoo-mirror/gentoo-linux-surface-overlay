@@ -42,8 +42,6 @@ src_prepare() {
 	eapply "${DISTDIR}/0011-cameras.patch"
 	eapply "${DISTDIR}/0012-ath10k-firmware-override.patch"
 	eapply_user
-#	mv "${WORKDIR}/linux-${KV_FULL}" "${WORKDIR}/linux-${KV_FULL}-surface"
-#	S="${WORKDIR}/linux-${KV_FULL}-surface"
 }
 
 pkg_setup() {
