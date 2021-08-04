@@ -31,7 +31,7 @@ SRC_URI="${KERNEL_URI} ${GENPATCHES_URI} ${ARCH_URI}
 		https://raw.githubusercontent.com/linux-surface/linux-surface/master/patches/5.13/0011-amd-s0ix.patch"
 
 src_unpack() {
-	#default
+	default
 	unpack_set_extraversion
 }
 
@@ -40,18 +40,18 @@ src_prepare() {
 	S="${WORKDIR}/linux-${KV_FULL}-surface"
 
 	#echo "S=$S"; pwd; ls -la ; find -name surface3-wmi.c -ls
-	eapply "${DISTDIR}/0001-surface3-oemb.patch"
-	eapply "${DISTDIR}/0002-mwifiex.patch"
-	eapply "${DISTDIR}/0003-ath10k.patch"
-	eapply "${DISTDIR}/0004-ipts.patch"
-	eapply "${DISTDIR}/0005-surface-sam-over-hid.patch"
-	eapply "${DISTDIR}/0006-surface-sam.patch"
-	eapply "${DISTDIR}/0007-surface-hotplug.patch"
-	eapply "${DISTDIR}/0008-surface-typecover.patch"
-	eapply "${DISTDIR}/0009-cameras.patch"
-	eapply "${DISTDIR}/0010-amd-gpio.patch"
-	eapply "${DISTDIR}/0011-amd-s0ix.patch"
-	eapply_user
+	#eapply "${DISTDIR}/0001-surface3-oemb.patch"
+	#eapply "${DISTDIR}/0002-mwifiex.patch"
+	#eapply "${DISTDIR}/0003-ath10k.patch"
+	#eapply "${DISTDIR}/0004-ipts.patch"
+	#eapply "${DISTDIR}/0005-surface-sam-over-hid.patch"
+	#eapply "${DISTDIR}/0006-surface-sam.patch"
+	#eapply "${DISTDIR}/0007-surface-hotplug.patch"
+	#eapply "${DISTDIR}/0008-surface-typecover.patch"
+	#eapply "${DISTDIR}/0009-cameras.patch"
+	#eapply "${DISTDIR}/0010-amd-gpio.patch"
+	#eapply "${DISTDIR}/0011-amd-s0ix.patch"
+	#eapply_user
 }
 
 pkg_setup() {
