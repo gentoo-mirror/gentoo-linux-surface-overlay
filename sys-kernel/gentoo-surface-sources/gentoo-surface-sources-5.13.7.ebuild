@@ -1,24 +1,21 @@
 # Copyright 1999-2021 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI="6"
+EAPI="7"
 ETYPE="sources"
-K_SECURITY_UNSUPPORTED="1"
 K_WANT_GENPATCHES="base extras experimental"
 K_GENPATCHES_VER="9"
 
 inherit kernel-2
-inherit eutils
 detect_version
 detect_arch
 
-KEYWORDS="~amd64"
-HOMEPAGE="https://github.com/linux-surface/linux-surface"
+KEYWORDS="~amd64 ~x86"
+HOMEPAGE="https://github.com/sifive/meta-sifive"
 IUSE="experimental"
-EXTRAVERSION="-${PN}-*"
-DESCRIPTION="Full sources including the Gentoo and Surface patchset for the ${KV_MAJOR}.${KV_MINOR} kernel tree."
-SRC_URI="${KERNEL_URI} ${GENPATCHES_URI} ${ARCH_URI}"
-FFFFFFFFSRC_URI="${KERNEL_URI} ${GENPATCHES_URI} ${ARCH_URI}
+
+DESCRIPTION="Full sources including the Gentoo patchset for the ${KV_MAJOR}.${KV_MINOR} kernel tree and surface patches"
+SRC_URI="${KERNEL_URI} ${GENPATCHES_URI} ${ARCH_URI}
 		https://raw.githubusercontent.com/linux-surface/linux-surface/master/patches/5.13/0001-surface3-oemb.patch
 		https://raw.githubusercontent.com/linux-surface/linux-surface/master/patches/5.13/0002-mwifiex.patch
 		https://raw.githubusercontent.com/linux-surface/linux-surface/master/patches/5.13/0003-ath10k.patch
@@ -29,41 +26,31 @@ FFFFFFFFSRC_URI="${KERNEL_URI} ${GENPATCHES_URI} ${ARCH_URI}
 		https://raw.githubusercontent.com/linux-surface/linux-surface/master/patches/5.13/0008-surface-typecover.patch
 		https://raw.githubusercontent.com/linux-surface/linux-surface/master/patches/5.13/0009-cameras.patch
 		https://raw.githubusercontent.com/linux-surface/linux-surface/master/patches/5.13/0010-amd-gpio.patch
-		https://raw.githubusercontent.com/linux-surface/linux-surface/master/patches/5.13/0011-amd-s0ix.patch"
-
-#src_unpack() {
-#	default
-#	unpack_set_extraversion
-#}
+		https://raw.githubusercontent.com/linux-surface/linux-surface/master/patches/5.13/0011-amd-s0ix.patch
+"
 
 src_prepare() {
-	default
-	unpack_set_extraversion
-	mv "${WORKDIR}/linux-${KV_FULL}" "${WORKDIR}/linux-${KV_FULL}-surface"
-	S="${WORKDIR}/linux-${KV_FULL}-surface"
+	local SURFACE_PATCH
+	local SURFACE_PATCHES="
+	0001-surface3-oemb.patch
+	0002-mwifiex.patch
+	0003-ath10k.patch
+	0004-ipts.patch
+	0005-surface-sam-over-hid.patch
+	0006-surface-sam.patch
+	0007-surface-hotplug.patch
+	0008-surface-typecover.patch
+	0009-cameras.patch
+	0010-amd-gpio.patch
+	0011-amd-s0ix.patch"
 
-	#echo "S=$S"; pwd; ls -la ; find -name surface3-wmi.c -ls
-	#eapply "${DISTDIR}/0001-surface3-oemb.patch"
-	#eapply "${DISTDIR}/0002-mwifiex.patch"
-	#eapply "${DISTDIR}/0003-ath10k.patch"
-	#eapply "${DISTDIR}/0004-ipts.patch"
-	#eapply "${DISTDIR}/0005-surface-sam-over-hid.patch"
-	#eapply "${DISTDIR}/0006-surface-sam.patch"
-	#eapply "${DISTDIR}/0007-surface-hotplug.patch"
-	#eapply "${DISTDIR}/0008-surface-typecover.patch"
-	#eapply "${DISTDIR}/0009-cameras.patch"
-	#eapply "${DISTDIR}/0010-amd-gpio.patch"
-	#eapply "${DISTDIR}/0011-amd-s0ix.patch"
-	#eapply_user
-}
 
-pkg_setup() {
-	ewarn ""
-	ewarn "${PN} is *not* supported by the Gentoo Kernel Project in any way."
-	ewarn "If you need support, please contact the overlay developers directly."
-	ewarn "Do *not* open bugs in Gentoo's bugzilla unless you have issues with"
-	ewarn "the ebuilds. Thank you."
-	ewarn ""
+	local SURFACE_PATH="${DISTDIR}"
+	for SURFACE_PATCH in $SURFACE_PATCHES
+	do
+		eapply "${SURFACE_PATH}/${SURFACE_PATCH}"
+	done
+	eapply_user
 }
 
 pkg_postinst() {
