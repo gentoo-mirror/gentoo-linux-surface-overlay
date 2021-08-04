@@ -33,6 +33,7 @@ src_unpack() {
 	default
 	if [[ -n ${A} ]]; then
 		#unpack_set_extraversion
+		echo
 	else
 		die
 		fi
