@@ -32,7 +32,8 @@ SRC_URI="${KERNEL_URI} ${GENPATCHES_URI} ${ARCH_URI}
 src_prepare() {
 	default
 	#echo "S=$S"; pwd; ls -la ; find -name surface3-wmi.c -ls
-	#eapply "${DISTDIR}/0001-surface3-oemb.patch"
+	die
+	eapply "${DISTDIR}/0001-surface3-oemb.patch"
 	eapply "${DISTDIR}/0002-mwifiex.patch"
 	eapply "${DISTDIR}/0003-ath10k.patch"
 	eapply "${DISTDIR}/0004-ipts.patch"
