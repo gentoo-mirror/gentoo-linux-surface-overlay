@@ -13,7 +13,7 @@ detect_arch
 KEYWORDS="~amd64 ~x86"
 HOMEPAGE="https://github.com/sifive/meta-sifive"
 IUSE="experimental"
-
+EXTRAVERSION="-${PN}-*"
 DESCRIPTION="Full sources including the Gentoo patchset for the ${KV_MAJOR}.${KV_MINOR} kernel tree and surface patches"
 SRC_URI="${KERNEL_URI} ${GENPATCHES_URI} ${ARCH_URI}
 		https://raw.githubusercontent.com/linux-surface/linux-surface/master/patches/5.13/0001-surface3-oemb.patch
@@ -28,6 +28,11 @@ SRC_URI="${KERNEL_URI} ${GENPATCHES_URI} ${ARCH_URI}
 		https://raw.githubusercontent.com/linux-surface/linux-surface/master/patches/5.13/0010-amd-gpio.patch
 		https://raw.githubusercontent.com/linux-surface/linux-surface/master/patches/5.13/0011-amd-s0ix.patch
 "
+
+src_unpack() {
+	default
+	unpack_set_extraversion
+	}
 
 src_prepare() {
 	local SURFACE_PATCH
