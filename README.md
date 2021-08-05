@@ -7,6 +7,7 @@ This is a work in-progress.
 - *iptsd* utility is needed for touchscreen support. Enable the user and system services after you install.
 - *libwacom-surface* improves touchscreen support.
 - *surface-control* commandline utility to control certain aspects of your surface device.
+- *libcamera* A complex camera support library for Linux, Android, and ChromeOS
 
 This repo was initally forked from one by Parinthapat Parinz: https://github.com/Parinz/linux-surface-overlay
 
