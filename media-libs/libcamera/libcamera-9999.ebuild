@@ -18,7 +18,7 @@ RDEPEND="${DEPEND}"
 BDEPEND=""
 
 src_configure() {
-	meson_src_configure
+	meson_src_configure "-Dpipelines=uvcvideo,ipu3"
 }
 
 
