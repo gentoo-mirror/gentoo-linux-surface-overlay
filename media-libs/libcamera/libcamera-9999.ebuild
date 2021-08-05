@@ -7,7 +7,6 @@ inherit git-r3 meson
 
 DESCRIPTION="A complex camera support library for Linux, Android, and ChromeOS"
 HOMEPAGE="https://libcamera.org/"
-#SRC_URI="git://linuxtv.org/libcamera.git"
 EGIT_REPO_URI="git://linuxtv.org/libcamera.git"
 
 LICENSE="LGPL"
