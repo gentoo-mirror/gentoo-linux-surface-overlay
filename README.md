@@ -14,17 +14,17 @@ This is a work in-progress.
 
 Follow the Gentoo handbook pretty closely with these exceptions:
 
-#. Disable secure boot (at least until after the install is finished.)
+1 Disable secure boot (at least until after the install is finished.)
 
 # Post-Installation
-#. Add this overlay (i.e. 'layman -a gentoo-linux-surface-overlay')
-#. emerge at least gentoo-surface-sources, iptsd, libwacom-surface, and surface-control (libcamera if you want camera support.)
+1 Add this overlay (i.e. 'layman -a gentoo-linux-surface-overlay')
+1 emerge at least gentoo-surface-sources, iptsd, libwacom-surface, and surface-control (libcamera if you want camera support.)
 
 # Configuraton
-#. For the kernel I have includeed a sample config in /usr/src/gentoo-surface-sources-<version>/EXAMPLE.config that you can cp to .config and use as-is if you like
-#. If you want keyboard to work correctly during boot the easiest solution is to just include all kernel modules in the initrd image (for genkernel users add/edit /etc/genkernel.conf: ALLRAMDISKMODULES="yes")
-#. If you have a surface book, enable the dtx daemons (system and user): 'systemctl enable --now surface-dtx-daemon.service' (as root) and 'systemctl enable --user --now surface-dtx-userd.service' (as your regular non-root user.)
-#. 
+1 For the kernel I have includeed a sample config in /usr/src/gentoo-surface-sources-<version>/EXAMPLE.config that you can cp to .config and use as-is if you like
+1 If you want keyboard to work correctly during boot the easiest solution is to just include all kernel modules in the initrd image (for genkernel users add/edit /etc/genkernel.conf: ALLRAMDISKMODULES="yes")
+1 If you have a surface book, enable the dtx daemons (system and user): 'systemctl enable --now surface-dtx-daemon.service' (as root) and 'systemctl enable --user --now surface-dtx-userd.service' (as your regular non-root user.)
+1 
 
 This repo was initally forked from one by Parinthapat Parinz: https://github.com/Parinz/linux-surface-overlay but has since been updated, add to, and improved upon.
 
