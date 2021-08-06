@@ -32,5 +32,5 @@ Follow the Gentoo amd64 handbook (https://wiki.gentoo.org/wiki/Handbook:AMD64) p
 
 *This repo was initally forked from one by Parinthapat Parinz: https://github.com/Parinz/linux-surface-overlay but has since been updated, add to, and improved upon.*
 
-*__This repo/project is in no way supported by nor endorced by Gentoo or the SUrface Linux project(s).__*
+*__This repo/project is in no way supported by nor endorced by Gentoo or the Surface Linux project(s).__*
 
