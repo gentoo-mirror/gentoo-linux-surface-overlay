@@ -4,7 +4,7 @@ Gentoo Linux Overlay with Linux Surface kernel and other utilities from linux-su
 
 ## Information
 - __gentoo-surface-sources__ gentoo-sources with surface patchsets applied
-- __iptsd__ utility is needed for touchscreen support. Enable system services after you install.
+- __iptsd__ utility is needed for touchscreen support. Enable system service after you install.
 - __libwacom-surface__ improves touchscreen support.
 - __surface-control__ commandline utility to control certain aspects of your surface device.
 - __surface-dtx-daemon__ utility to control attach/detach of clipboard on Surface Book devices.
