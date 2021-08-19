@@ -3,4 +3,4 @@ app-misc/surface-dtx-daemon 0.3.0: Utility to control attach/detach of clipboard
 dev-libs/libwacom-surface 1.9: Library for identifying Wacom tablets and their model-specific features with patches from linux-surface
 media-libs/libcamera 9999: A complex camera support library for Linux, Android, and ChromeOS
 sys-firmware/iptsd 0.4: Userspace daemon for Intel Precise Touch & Stylus
-sys-kernel/gentoo-surface-sources 5.13.7: Full sources including the Gentoo patchset for the 5.13 kernel tree and surface patches
+sys-kernel/gentoo-surface-sources 5.13.7 5.13.12: Full sources including the Gentoo patchset for the 5.13 kernel tree and surface patches
