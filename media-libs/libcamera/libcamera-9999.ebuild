@@ -18,6 +18,9 @@ RDEPEND="${DEPEND}"
 BDEPEND=""
 
 src_configure() {
+	local emesonargs=(
+		$(meson_use v4l2)
+		)
 	meson_src_configure "-Dpipelines=uvcvideo,ipu3"
 }
 
