@@ -12,6 +12,7 @@ EGIT_REPO_URI="git://linuxtv.org/libcamera.git"
 LICENSE="LGPL"
 SLOT="0"
 KEYWORDS="~x86 ~amd64"
+IUSE="v4l2"
 
 DEPEND=""
 RDEPEND="${DEPEND}"
