@@ -40,12 +40,10 @@ src_prepare() {
 	${KV_FULL}-0003-ath10k.patch
 	${KV_FULL}-0004-ipts.patch
 	${KV_FULL}-0005-surface-sam-over-hid.patch
-	${KV_FULL}-0006-surface-sam.patch
-	${KV_FULL}-0007-surface-hotplug.patch
-	${KV_FULL}-0008-surface-typecover.patch
-	${KV_FULL}-0009-cameras.patch
-	${KV_FULL}-0010-amd-gpio.patch
-	${KV_FULL}-0011-amd-s0ix.patch"
+	${KV_FULL}-0006-surface-typecover.patch
+	${KV_FULL}-0007-cameras.patch
+	${KV_FULL}-0008-amd-gpio.patch
+	${KV_FULL}-0009-amd-s0ix.patch"
 
 
 	local SURFACE_PATH="${DISTDIR}"
