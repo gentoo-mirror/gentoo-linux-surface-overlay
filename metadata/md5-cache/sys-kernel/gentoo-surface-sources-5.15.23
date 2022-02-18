@@ -1,0 +1,15 @@
+BDEPEND=!build? ( sys-apps/sed )
+DEFINED_PHASES=compile install postinst postrm preinst prepare setup test unpack
+DESCRIPTION=Full sources including the Gentoo patchset for the 5.15 kernel tree and surface patches
+EAPI=7
+HOMEPAGE=https://github.com/sifive/meta-sifive
+INHERIT=kernel-2
+IUSE=experimental symlink build
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-2
+RDEPEND=!build? ( app-arch/cpio dev-lang/perl sys-devel/bc sys-devel/bison sys-devel/flex sys-devel/make >=sys-libs/ncurses-5.2 virtual/libelf virtual/pkgconfig )
+RESTRICT=binchecks strip
+SLOT=5.15.23
+SRC_URI=https://www.kernel.org/pub/linux/kernel/v5.x/linux-5.15.tar.xz https://dev.gentoo.org/~alicef/dist/genpatches/genpatches-5.15-10.base.tar.xz https://dev.gentoo.org/~mpagano/dist/genpatches/genpatches-5.15-10.base.tar.xz https://dev.gentoo.org/~whissi/dist/genpatches/genpatches-5.15-10.base.tar.xz https://dev.gentoo.org/~alicef/dist/genpatches/genpatches-5.15-10.extras.tar.xz https://dev.gentoo.org/~mpagano/dist/genpatches/genpatches-5.15-10.extras.tar.xz https://dev.gentoo.org/~whissi/dist/genpatches/genpatches-5.15-10.extras.tar.xz experimental? ( https://dev.gentoo.org/~alicef/dist/genpatches/genpatches-5.15-10.experimental.tar.xz https://dev.gentoo.org/~mpagano/dist/genpatches/genpatches-5.15-10.experimental.tar.xz https://dev.gentoo.org/~whissi/dist/genpatches/genpatches-5.15-10.experimental.tar.xz ) https://raw.githubusercontent.com/linux-surface/linux-surface/master/patches/5.15/0001-surface3-oemb.patch -> 5.15.23-gentoo-0001-surface3-oemb.patch https://raw.githubusercontent.com/linux-surface/linux-surface/master/patches/5.15/0002-mwifiex.patch -> 5.15.23-gentoo-0002-mwifiex.patch https://raw.githubusercontent.com/linux-surface/linux-surface/master/patches/5.15/0003-ath10k.patch -> 5.15.23-gentoo-0003-ath10k.patch https://raw.githubusercontent.com/linux-surface/linux-surface/master/patches/5.15/0004-ipts.patch -> 5.15.23-gentoo-0004-ipts.patch https://raw.githubusercontent.com/linux-surface/linux-surface/master/patches/5.15/0005-surface-sam-over-hid.patch -> 5.15.23-gentoo-0005-surface-sam-over-hid.patch https://raw.githubusercontent.com/linux-surface/linux-surface/master/patches/5.15/0006-surface-typecover.patch -> 5.15.23-gentoo-0006-surface-typecover.patch https://raw.githubusercontent.com/linux-surface/linux-surface/master/patches/5.15/0007-cameras.patch -> 5.15.23-gentoo-0007-cameras.patch https://raw.githubusercontent.com/linux-surface/linux-surface/master/patches/5.15/0008-amd-gpio.patch -> 5.15.23-gentoo-0008-amd-gpio.patch https://raw.githubusercontent.com/linux-surface/linux-surface/master/patches/5.15/0009-amd-s0ix.patch -> 5.15.23-gentoo-0009-amd-s0ix.patch
+_eclasses_=estack	055c42df72f76a4f45ec92b35e83cd56	toolchain-funcs	badd6e329e1f3e6bee99b35bf8763ce8	multilib	de4beb52bfa93c4c5d96792a6b5e1784	kernel-2	0504e914bab621103eb74f52fad0fc6d
+_md5_=b3d48a41956f961b0cd6af33ed7b9e36
