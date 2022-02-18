@@ -4,7 +4,7 @@
 EAPI="7"
 ETYPE="sources"
 K_WANT_GENPATCHES="base extras experimental"
-K_GENPATCHES_VER="10"
+K_GENPATCHES_VER="25"
 
 inherit kernel-2
 detect_version
@@ -24,7 +24,7 @@ SRC_URI="${KERNEL_URI} ${GENPATCHES_URI} ${ARCH_URI}
 		https://raw.githubusercontent.com/linux-surface/linux-surface/master/patches/5.15/0006-surface-sam-over-hid.patch -> ${KV_FULL}-0006-surface-sam-over-hid.patch
 		https://raw.githubusercontent.com/linux-surface/linux-surface/master/patches/5.15/0007-surface-gpe.patch -> ${KV_FULL}-0007-surface-gpe.patch
 		https://raw.githubusercontent.com/linux-surface/linux-surface/master/patches/5.15/0008-surface-button.patch -> ${KV_FULL}-0008-surface-button.patch
-		https://raw.githubusercontent.com/linux-surface/linux-surface/master/patches/5.15/0009-surface-typecover.patch -> ${KV_FULL}-0008-surface-typcover.patch
+		https://raw.githubusercontent.com/linux-surface/linux-surface/master/patches/5.15/0009-surface-typecover.patch -> ${KV_FULL}-0009-surface-typecover.patch
 		https://raw.githubusercontent.com/linux-surface/linux-surface/master/patches/5.15/0010-cameras.patch -> ${KV_FULL}-0010-cameras.patch
 		https://raw.githubusercontent.com/linux-surface/linux-surface/master/patches/5.15/0011-amd-gpio.patch -> ${KV_FULL}-0011-amd-gpio.patch
 		https://raw.githubusercontent.com/linux-surface/linux-surface/master/patches/5.15/0012-misc-fixes.patch -> ${KV_FULL}-0012-misc-fixes.patch
