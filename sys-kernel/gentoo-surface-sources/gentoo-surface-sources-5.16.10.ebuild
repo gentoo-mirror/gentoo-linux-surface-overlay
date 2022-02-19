@@ -52,6 +52,7 @@ src_prepare() {
 	${KV_FULL}-0012-misc-fixes.patch
 	"
 
+	touch "${WORKDIR}/linux-${KV_FULL}/drivers/platform/x86/intel/int3472/common.h"
 
 	local SURFACE_PATH="${DISTDIR}"
 	for SURFACE_PATCH in $SURFACE_PATCHES
