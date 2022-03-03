@@ -3,7 +3,6 @@ Gentoo Linux Overlay with Linux Surface kernel and other utilities from linux-su
 # *This is a work in-progress, but most things do work!*
 
 ## Information
-- __gentoo-surface-sources__ gentoo-sources with surface patchsets applied
 - __iptsd__ utility is needed for touchscreen support. Enable system service after you install.
 - __libwacom-surface__ improves touchscreen support.
 - __surface-control__ commandline utility to control certain aspects of your surface device.
@@ -22,10 +21,10 @@ Follow the Gentoo amd64 handbook (https://wiki.gentoo.org/wiki/Handbook:AMD64) p
 
 ## Post-Installation
 1. Add this overlay (i.e. 'layman -a gentoo-linux-surface-overlay')
-1. emerge at least gentoo-surface-sources, iptsd, libwacom-surface, and surface-control (libcamera if you want camera support and surface-dtx-daemon if you have a surface book.)
+1. emerge at least iptsd, libwacom-surface, and surface-control (libcamera if you want camera support and surface-dtx-daemon if you have a surface book.)
+1. Go grab my gentoo-surface-sources script to get a working kernel that includes the surface patchset and the Gentoo patchset: https://github.com/CanuteTheGreat/toolbox/tree/master/gentoo-surface-sources
 
 ## Configuraton
-1. For the kernel I have includeed a sample config in /usr/src/gentoo-surface-sources-<version>/EXAMPLE.config that you can cp to .config and use as-is if you like
 1. If you want keyboard to work correctly during boot the easiest solution is to just include all kernel modules in the initrd image (for genkernel users add/edit /etc/genkernel.conf: ALLRAMDISKMODULES="yes")
 1. Enable itpsd: systemctl enable --now iptsd
 1. If you have a surface book, enable the dtx daemons (system and user): 'systemctl enable --now surface-dtx-daemon.service' (as root) and 'systemctl enable --user --now surface-dtx-userd.service' (as your regular non-root user.)
