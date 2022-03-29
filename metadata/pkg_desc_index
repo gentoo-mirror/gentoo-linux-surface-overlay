@@ -2,4 +2,4 @@ app-misc/surface-control 9999: Commandline utility to control certain aspects of
 app-misc/surface-dtx-daemon 0.3.1: Utility to control attach/detach of clipboard on Surface Book devices.
 dev-libs/libwacom-surface 1.9: Library for identifying Wacom tablets and their model-specific features with patches from linux-surface
 media-libs/libcamera 9999: A complex camera support library for Linux, Android, and ChromeOS
-sys-firmware/iptsd 0.4: Userspace daemon for Intel Precise Touch & Stylus
+sys-firmware/iptsd 0.4 0.5: Userspace daemon for Intel Precise Touch & Stylus
