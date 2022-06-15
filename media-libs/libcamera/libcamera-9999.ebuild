@@ -14,9 +14,9 @@ SLOT="0"
 KEYWORDS="~x86 ~amd64"
 IUSE="v4l2"
 
-DEPEND=""
+DEPEND="dev-python/yaml and dev-python/ply"
 RDEPEND="${DEPEND}"
-BDEPEND=""
+BDEPEND="${DEPEND}"
 
 src_configure() {
 	local emesonargs=(
