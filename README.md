@@ -1,5 +1,7 @@
 Gentoo Linux Overlay with Linux Surface kernel and other utilities from linux-surface (https://github.com/linux-surface/linux-surface) repo.
 
+If you find something wrong, file an issue (please!)
+
 # *This is a work in-progress, but most things do work!*
 
 ## Information
