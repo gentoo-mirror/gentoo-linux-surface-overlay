@@ -37,8 +37,9 @@ src_install() {
 	cargo_src_install --path surface-dtx-userd
 	insinto /etc
 	doins -r etc/dtx
-	doins -r etc/systemd
 	doins -r etc/dbus
 	doins -r etc/udev
+	insinto /etc/systemd/system
+	doins -r etc/systemd
 }
 
