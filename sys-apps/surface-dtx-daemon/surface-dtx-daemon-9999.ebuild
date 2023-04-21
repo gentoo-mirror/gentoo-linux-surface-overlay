@@ -42,6 +42,7 @@ src_install() {
 	doins  etc/udev/40-surface_dtx.rules
 	insinto /etc/systemd/system
 	doins etc/systemd/surface-dtx-daemon.service
+	insinto /etc/systemd/user
 	doins etc/systemd/surface-dtx-userd.service
 }
 
