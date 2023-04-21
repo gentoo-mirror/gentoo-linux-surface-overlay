@@ -1,5 +1,5 @@
 app-misc/surface-control 9999: Commandline utility to control certain aspects of your surface device.
-app-misc/surface-dtx-daemon 0.3.1: Utility to control attach/detach of clipboard on Surface Book devices.
+app-misc/surface-dtx-daemon 0.3.1 0.3.4: Utility to control attach/detach of clipboard on Surface Book devices.
 dev-cpp/CLI11 2.3.2: A command line parser for C++11
 dev-libs/libwacom-surface 1.9: Library for identifying Wacom tablets and their model-specific features with patches from linux-surface
 media-libs/libcamera 0.0.4 9999: A library for camera support in Linux, Android, and ChromeOS
