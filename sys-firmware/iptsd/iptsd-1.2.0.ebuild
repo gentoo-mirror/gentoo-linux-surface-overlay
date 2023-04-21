@@ -14,7 +14,7 @@ SLOT="0"
 KEYWORDS="~amd64"
 IUSE=""
 
-DEPEND="dev-libs/hidapi dev-cpp/CLI11 dev-libs/spdlog sys-libs/hidrd"
+DEPEND="dev-libs/hidapi dev-cpp/CLI11 dev-libs/spdlog sys-libs/hidrd dev-cpp/ms-gsl"
 RDEPEND="${DEPEND}"
 
 src_configure() {
