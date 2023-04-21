@@ -42,6 +42,6 @@ src_install() {
 	doins -r etc/udev
 	insinto /etc/systemd/system
 	doins etc/systemd/surface-dtx-daemon.service
-	doinst etc/systemd/surface-dtx-userd.service
+	doins etc/systemd/surface-dtx-userd.service
 }
 
