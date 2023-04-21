@@ -3,11 +3,11 @@
 
 EAPI=7
 
-inherit git-r3 meson
+inherit meson
 
 DESCRIPTION="A library for camera support in Linux, Android, and ChromeOS"
 HOMEPAGE="https://libcamera.org/"
-EGIT_REPO_URI="https://git.libcamera.org/libcamera/libcamera.git"
+SRC_URI="https://github.com/${PN}-org/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="LGPL-2.1+"
 SLOT="0"
