@@ -5,7 +5,7 @@ EAPI=7
 
 DESCRIPTION="Utility to control attach/detach of clipboard on Surface Book devices."
 HOMEPAGE="https://github.com/linux-surface/linux-surface"
-SRC_URI="https://github.com/linux-surface/surface-dtx-daemon/releases/download/v${PV}-2/${PN}_${PV}-2_amd64.deb"
+SRC_URI="https://github.com/linux-surface/surface-dtx-daemon/releases/download/v${PV}-1/${PN}_${PV}-1_amd64.deb"
 
 LICENSE="MIT"
 SLOT="0"
