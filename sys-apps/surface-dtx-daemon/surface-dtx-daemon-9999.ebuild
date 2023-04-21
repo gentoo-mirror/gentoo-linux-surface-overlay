@@ -38,6 +38,7 @@ src_install() {
 	insinto /etc
 	doins -r etc/dtx
 	doins -r etc/dbus
+	insinto /etc/udev/rules.d
 	doins -r etc/udev
 	insinto /etc/systemd/system
 	doins -r etc/systemd
