@@ -38,8 +38,8 @@ src_install() {
 	insinto /etc
 	doins -r etc/dtx
 	doins -r etc/dbus
-	insinto /etc/udev/rules.d
-	doins -r etc/udev
+	insinto /lib/udev/rules.d
+	doins  etc/udev/40-surface_dtx.rules
 	insinto /etc/systemd/system
 	doins etc/systemd/surface-dtx-daemon.service
 	doins etc/systemd/surface-dtx-userd.service
