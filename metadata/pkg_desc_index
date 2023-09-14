@@ -1,4 +1,5 @@
 dev-cpp/CLI11 2.3.2: A command line parser for C++11
+dev-libs/libwacom-surface 1.9: Library for identifying Wacom tablets and their model-specific features with patches from linux-surface
 media-libs/libcamera 0.0.4 9999: A library for camera support in Linux, Android, and ChromeOS
 sys-apps/surface-control 9999: Commandline utility to control certain aspects of your surface device.
 sys-apps/surface-dtx-daemon 9999: Surface Detach (DTX) Daemon
