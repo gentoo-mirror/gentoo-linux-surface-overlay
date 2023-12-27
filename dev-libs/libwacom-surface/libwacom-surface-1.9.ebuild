@@ -3,9 +3,9 @@
 
 EAPI=8
 
-PYTHON_COMPAT=( python3_{7..9} )
+PYTHON_COMPAT=( python3_{7..11} )
 
-inherit eutils meson python-any-r1 toolchain-funcs udev
+inherit meson python-any-r1 toolchain-funcs udev
 
 DESCRIPTION="Library for identifying Wacom tablets and their model-specific features with patches from linux-surface"
 HOMEPAGE="https://github.com/linux-surface/linux-surface"
