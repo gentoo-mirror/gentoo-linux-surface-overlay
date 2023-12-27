@@ -25,5 +25,5 @@ src_unpack() {
 }
 
 src_compile() {
-	cargo_src_compile --locked
+	cargo_src_compile --release --locked
 }
